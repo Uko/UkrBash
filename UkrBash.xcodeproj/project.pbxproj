@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6DFDF2D31438B9BC005FB60F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DFDF2D21438B9BC005FB60F /* UIKit.framework */; };
+		6DFDF2D51438B9BC005FB60F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DFDF2D41438B9BC005FB60F /* Foundation.framework */; };
+		6DFDF2D71438B9BC005FB60F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DFDF2D61438B9BC005FB60F /* CoreGraphics.framework */; };
+		6DFDF2DD1438B9BC005FB60F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6DFDF2DB1438B9BC005FB60F /* InfoPlist.strings */; };
+		6DFDF2DF1438B9BC005FB60F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDF2DE1438B9BC005FB60F /* main.m */; };
+		6DFDF2E31438B9BC005FB60F /* UkrBashAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDF2E21438B9BC005FB60F /* UkrBashAppDelegate.m */; };
+		6DFDF2E61438B9BD005FB60F /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DFDF2E41438B9BD005FB60F /* MainWindow.xib */; };
+		6DFDF2EE1438B9BE005FB60F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DFDF2ED1438B9BE005FB60F /* SenTestingKit.framework */; };
+		6DFDF2EF1438B9BE005FB60F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DFDF2D21438B9BC005FB60F /* UIKit.framework */; };
+		6DFDF2F01438B9BE005FB60F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DFDF2D41438B9BC005FB60F /* Foundation.framework */; };
+		6DFDF2F11438B9BE005FB60F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DFDF2D61438B9BC005FB60F /* CoreGraphics.framework */; };
+		6DFDF2F91438B9BE005FB60F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6DFDF2F71438B9BE005FB60F /* InfoPlist.strings */; };
+		6DFDF2FB1438B9BE005FB60F /* UkrBashTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 6DFDF2FA1438B9BE005FB60F /* UkrBashTests.h */; };
+		6DFDF2FD1438B9BE005FB60F /* UkrBashTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDF2FC1438B9BE005FB60F /* UkrBashTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6DFDF2F21438B9BE005FB60F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DFDF2C51438B9BC005FB60F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6DFDF2CD1438B9BC005FB60F;
+			remoteInfo = UkrBash;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6DFDF2CE1438B9BC005FB60F /* UkrBash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UkrBash.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DFDF2D21438B9BC005FB60F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6DFDF2D41438B9BC005FB60F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6DFDF2D61438B9BC005FB60F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6DFDF2DA1438B9BC005FB60F /* UkrBash-Info.plist */ = {isa = PBXFileReference; path = "UkrBash-Info.plist"; sourceTree = "<group>"; };
+		6DFDF2DC1438B9BC005FB60F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6DFDF2DE1438B9BC005FB60F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6DFDF2E01438B9BC005FB60F /* UkrBash-Prefix.pch */ = {isa = PBXFileReference; path = "UkrBash-Prefix.pch"; sourceTree = "<group>"; };
+		6DFDF2E11438B9BC005FB60F /* UkrBashAppDelegate.h */ = {isa = PBXFileReference; path = UkrBashAppDelegate.h; sourceTree = "<group>"; };
+		6DFDF2E21438B9BC005FB60F /* UkrBashAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UkrBashAppDelegate.m; sourceTree = "<group>"; };
+		6DFDF2E51438B9BD005FB60F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		6DFDF2EC1438B9BE005FB60F /* UkrBashTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UkrBashTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DFDF2ED1438B9BE005FB60F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		6DFDF2F61438B9BE005FB60F /* UkrBashTests-Info.plist */ = {isa = PBXFileReference; path = "UkrBashTests-Info.plist"; sourceTree = "<group>"; };
+		6DFDF2F81438B9BE005FB60F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6DFDF2FA1438B9BE005FB60F /* UkrBashTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UkrBashTests.h; sourceTree = "<group>"; };
+		6DFDF2FC1438B9BE005FB60F /* UkrBashTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UkrBashTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6DFDF2CB1438B9BC005FB60F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DFDF2D31438B9BC005FB60F /* UIKit.framework in Frameworks */,
+				6DFDF2D51438B9BC005FB60F /* Foundation.framework in Frameworks */,
+				6DFDF2D71438B9BC005FB60F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DFDF2E81438B9BE005FB60F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DFDF2EE1438B9BE005FB60F /* SenTestingKit.framework in Frameworks */,
+				6DFDF2EF1438B9BE005FB60F /* UIKit.framework in Frameworks */,
+				6DFDF2F01438B9BE005FB60F /* Foundation.framework in Frameworks */,
+				6DFDF2F11438B9BE005FB60F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6DFDF2C31438B9BB005FB60F = {
+			isa = PBXGroup;
+			children = (
+				6DFDF2D81438B9BC005FB60F /* UkrBash */,
+				6DFDF2F41438B9BE005FB60F /* UkrBashTests */,
+				6DFDF2D11438B9BC005FB60F /* Frameworks */,
+				6DFDF2CF1438B9BC005FB60F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6DFDF2CF1438B9BC005FB60F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6DFDF2CE1438B9BC005FB60F /* UkrBash.app */,
+				6DFDF2EC1438B9BE005FB60F /* UkrBashTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6DFDF2D11438B9BC005FB60F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6DFDF2D21438B9BC005FB60F /* UIKit.framework */,
+				6DFDF2D41438B9BC005FB60F /* Foundation.framework */,
+				6DFDF2D61438B9BC005FB60F /* CoreGraphics.framework */,
+				6DFDF2ED1438B9BE005FB60F /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6DFDF2D81438B9BC005FB60F /* UkrBash */ = {
+			isa = PBXGroup;
+			children = (
+				6DFDF2E11438B9BC005FB60F /* UkrBashAppDelegate.h */,
+				6DFDF2E21438B9BC005FB60F /* UkrBashAppDelegate.m */,
+				6DFDF2E41438B9BD005FB60F /* MainWindow.xib */,
+				6DFDF2D91438B9BC005FB60F /* Supporting Files */,
+			);
+			path = UkrBash;
+			sourceTree = "<group>";
+		};
+		6DFDF2D91438B9BC005FB60F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6DFDF2DA1438B9BC005FB60F /* UkrBash-Info.plist */,
+				6DFDF2DB1438B9BC005FB60F /* InfoPlist.strings */,
+				6DFDF2DE1438B9BC005FB60F /* main.m */,
+				6DFDF2E01438B9BC005FB60F /* UkrBash-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6DFDF2F41438B9BE005FB60F /* UkrBashTests */ = {
+			isa = PBXGroup;
+			children = (
+				6DFDF2FA1438B9BE005FB60F /* UkrBashTests.h */,
+				6DFDF2FC1438B9BE005FB60F /* UkrBashTests.m */,
+				6DFDF2F51438B9BE005FB60F /* Supporting Files */,
+			);
+			path = UkrBashTests;
+			sourceTree = "<group>";
+		};
+		6DFDF2F51438B9BE005FB60F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6DFDF2F61438B9BE005FB60F /* UkrBashTests-Info.plist */,
+				6DFDF2F71438B9BE005FB60F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6DFDF2CD1438B9BC005FB60F /* UkrBash */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DFDF3001438B9BE005FB60F /* Build configuration list for PBXNativeTarget "UkrBash" */;
+			buildPhases = (
+				6DFDF2CA1438B9BC005FB60F /* Sources */,
+				6DFDF2CB1438B9BC005FB60F /* Frameworks */,
+				6DFDF2CC1438B9BC005FB60F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UkrBash;
+			productName = UkrBash;
+			productReference = 6DFDF2CE1438B9BC005FB60F /* UkrBash.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6DFDF2EB1438B9BE005FB60F /* UkrBashTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DFDF3031438B9BE005FB60F /* Build configuration list for PBXNativeTarget "UkrBashTests" */;
+			buildPhases = (
+				6DFDF2E71438B9BE005FB60F /* Sources */,
+				6DFDF2E81438B9BE005FB60F /* Frameworks */,
+				6DFDF2E91438B9BE005FB60F /* Resources */,
+				6DFDF2EA1438B9BE005FB60F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6DFDF2F31438B9BE005FB60F /* PBXTargetDependency */,
+			);
+			name = UkrBashTests;
+			productName = UkrBashTests;
+			productReference = 6DFDF2EC1438B9BE005FB60F /* UkrBashTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6DFDF2C51438B9BC005FB60F /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 6DFDF2C81438B9BC005FB60F /* Build configuration list for PBXProject "UkrBash" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6DFDF2C31438B9BB005FB60F;
+			productRefGroup = 6DFDF2CF1438B9BC005FB60F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6DFDF2CD1438B9BC005FB60F /* UkrBash */,
+				6DFDF2EB1438B9BE005FB60F /* UkrBashTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6DFDF2CC1438B9BC005FB60F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DFDF2DD1438B9BC005FB60F /* InfoPlist.strings in Resources */,
+				6DFDF2E61438B9BD005FB60F /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DFDF2E91438B9BE005FB60F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DFDF2F91438B9BE005FB60F /* InfoPlist.strings in Resources */,
+				6DFDF2FB1438B9BE005FB60F /* UkrBashTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6DFDF2EA1438B9BE005FB60F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6DFDF2CA1438B9BC005FB60F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DFDF2DF1438B9BC005FB60F /* main.m in Sources */,
+				6DFDF2E31438B9BC005FB60F /* UkrBashAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DFDF2E71438B9BE005FB60F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DFDF2FD1438B9BE005FB60F /* UkrBashTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6DFDF2F31438B9BE005FB60F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6DFDF2CD1438B9BC005FB60F /* UkrBash */;
+			targetProxy = 6DFDF2F21438B9BE005FB60F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6DFDF2DB1438B9BC005FB60F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DFDF2DC1438B9BC005FB60F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6DFDF2E41438B9BD005FB60F /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DFDF2E51438B9BD005FB60F /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		6DFDF2F71438B9BE005FB60F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DFDF2F81438B9BE005FB60F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6DFDF2FE1438B9BE005FB60F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6DFDF2FF1438B9BE005FB60F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6DFDF3011438B9BE005FB60F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UkrBash/UkrBash-Prefix.pch";
+				INFOPLIST_FILE = "UkrBash/UkrBash-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6DFDF3021438B9BE005FB60F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UkrBash/UkrBash-Prefix.pch";
+				INFOPLIST_FILE = "UkrBash/UkrBash-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6DFDF3041438B9BE005FB60F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UkrBash.app/UkrBash";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UkrBash/UkrBash-Prefix.pch";
+				INFOPLIST_FILE = "UkrBashTests/UkrBashTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		6DFDF3051438B9BE005FB60F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UkrBash.app/UkrBash";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UkrBash/UkrBash-Prefix.pch";
+				INFOPLIST_FILE = "UkrBashTests/UkrBashTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6DFDF2C81438B9BC005FB60F /* Build configuration list for PBXProject "UkrBash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DFDF2FE1438B9BE005FB60F /* Debug */,
+				6DFDF2FF1438B9BE005FB60F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6DFDF3001438B9BE005FB60F /* Build configuration list for PBXNativeTarget "UkrBash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DFDF3011438B9BE005FB60F /* Debug */,
+				6DFDF3021438B9BE005FB60F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6DFDF3031438B9BE005FB60F /* Build configuration list for PBXNativeTarget "UkrBashTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DFDF3041438B9BE005FB60F /* Debug */,
+				6DFDF3051438B9BE005FB60F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6DFDF2C51438B9BC005FB60F /* Project object */;
+}
