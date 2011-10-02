@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class QuoteNavController;
 
 @interface UkrBashAppDelegate : NSObject <UIApplicationDelegate>
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UITabBarController *mainController;
+@property (nonatomic, retain) IBOutlet UINavigationController *quoteNavController;
 
 @end

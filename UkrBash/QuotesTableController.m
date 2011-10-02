@@ -7,8 +7,13 @@
 //
 
 #import "QuotesTableController.h"
+#import "QuoteViewController.h"
+#import "UkrBashAppDelegate.h"
 
 @implementation QuotesTableController
+
+@synthesize tableData = _tableData;
+@synthesize quoteViewController = _quoteViewController;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -32,7 +37,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
+    //NSMutableArray *array = [[NSMutableArray alloc] initWithObjects:@"one", @"two", nil];
+    _tableData = [[NSMutableArray alloc] initWithObjects:@"one", @"two", nil];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -77,16 +84,15 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    //NSLog(@"%@ rows",[_tableData count]);
+    return [_tableData count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -99,7 +105,7 @@
     }
     
     // Configure the cell...
-    
+    cell.textLabel.text=[_tableData objectAtIndex:[indexPath row]];
     return cell;
 }
 
@@ -154,6 +160,22 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      [detailViewController release];
      */
+    
+    NSInteger row = [indexPath row];
+    if(quoteViewController == nil)
+    {
+        _quoteViewController = [[QuoteViewController alloc] initWithNibName:@"QuoteViewController" bundle:nil]; 
+    }
+    _quoteViewController.title = [NSString stringWithFormat:@"%@",[_tableData objectAtIndex:row]];
+    UkrBashAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    [delegate.quoteNavController pushViewController:_quoteViewController animated:YES];
+}
+
+- (void) dealloc
+{
+    [tableData release];
+    [quoteViewController release];
+    [super dealloc];
 }
 
 @end

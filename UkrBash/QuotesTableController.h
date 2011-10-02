@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+@class QuoteViewController;
 
 @interface QuotesTableController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 {
     IBOutlet UITableView *quotesTable;
+    NSMutableArray *tableData;
+    QuoteViewController *quoteViewController;
 }
+
+@property (nonatomic, retain) NSMutableArray *tableData;
+@property (nonatomic, retain) QuoteViewController *quoteViewController;
+
 @end

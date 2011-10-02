@@ -23,6 +23,8 @@
 		6DFDF2FD1438B9BE005FB60F /* UkrBashTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDF2FC1438B9BE005FB60F /* UkrBashTests.m */; };
 		6DFDF3091438D93D005FB60F /* QuotesTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDF3071438D93D005FB60F /* QuotesTableController.m */; };
 		6DFDF30A1438D93D005FB60F /* QuotesTableController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DFDF3081438D93D005FB60F /* QuotesTableController.xib */; };
+		6DFDF30E143901AC005FB60F /* QuoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDF30C143901AC005FB60F /* QuoteViewController.m */; };
+		6DFDF30F143901AC005FB60F /* QuoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DFDF30D143901AC005FB60F /* QuoteViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,9 @@
 		6DFDF3061438D93D005FB60F /* QuotesTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuotesTableController.h; sourceTree = "<group>"; };
 		6DFDF3071438D93D005FB60F /* QuotesTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuotesTableController.m; sourceTree = "<group>"; };
 		6DFDF3081438D93D005FB60F /* QuotesTableController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuotesTableController.xib; sourceTree = "<group>"; };
+		6DFDF30B143901AB005FB60F /* QuoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuoteViewController.h; sourceTree = "<group>"; };
+		6DFDF30C143901AC005FB60F /* QuoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuoteViewController.m; sourceTree = "<group>"; };
+		6DFDF30D143901AC005FB60F /* QuoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuoteViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +127,9 @@
 				6DFDF3061438D93D005FB60F /* QuotesTableController.h */,
 				6DFDF3071438D93D005FB60F /* QuotesTableController.m */,
 				6DFDF3081438D93D005FB60F /* QuotesTableController.xib */,
+				6DFDF30B143901AB005FB60F /* QuoteViewController.h */,
+				6DFDF30C143901AC005FB60F /* QuoteViewController.m */,
+				6DFDF30D143901AC005FB60F /* QuoteViewController.xib */,
 				6DFDF2D91438B9BC005FB60F /* Supporting Files */,
 			);
 			path = UkrBash;
@@ -227,6 +235,7 @@
 				6DFDF2DD1438B9BC005FB60F /* InfoPlist.strings in Resources */,
 				6DFDF2E61438B9BD005FB60F /* MainWindow.xib in Resources */,
 				6DFDF30A1438D93D005FB60F /* QuotesTableController.xib in Resources */,
+				6DFDF30F143901AC005FB60F /* QuoteViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +274,7 @@
 				6DFDF2DF1438B9BC005FB60F /* main.m in Sources */,
 				6DFDF2E31438B9BC005FB60F /* UkrBashAppDelegate.m in Sources */,
 				6DFDF3091438D93D005FB60F /* QuotesTableController.m in Sources */,
+				6DFDF30E143901AC005FB60F /* QuoteViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

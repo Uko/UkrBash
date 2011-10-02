@@ -12,6 +12,7 @@
 
 @synthesize window = _window;
 @synthesize mainController = _mainController;
+@synthesize quoteNavController = _quoteNavController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
