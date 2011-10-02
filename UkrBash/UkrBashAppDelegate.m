@@ -11,10 +11,12 @@
 @implementation UkrBashAppDelegate
 
 @synthesize window = _window;
+@synthesize mainController = _mainController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [_window addSubview:_mainController.view];
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -60,6 +62,7 @@
 
 - (void)dealloc
 {
+    [_mainController release];
     [_window release];
     [super dealloc];
 }
