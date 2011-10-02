@@ -21,6 +21,8 @@
 		6DFDF2F91438B9BE005FB60F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6DFDF2F71438B9BE005FB60F /* InfoPlist.strings */; };
 		6DFDF2FB1438B9BE005FB60F /* UkrBashTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 6DFDF2FA1438B9BE005FB60F /* UkrBashTests.h */; };
 		6DFDF2FD1438B9BE005FB60F /* UkrBashTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDF2FC1438B9BE005FB60F /* UkrBashTests.m */; };
+		6DFDF3091438D93D005FB60F /* QuotesTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFDF3071438D93D005FB60F /* QuotesTableController.m */; };
+		6DFDF30A1438D93D005FB60F /* QuotesTableController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DFDF3081438D93D005FB60F /* QuotesTableController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		6DFDF2F81438B9BE005FB60F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6DFDF2FA1438B9BE005FB60F /* UkrBashTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UkrBashTests.h; sourceTree = "<group>"; };
 		6DFDF2FC1438B9BE005FB60F /* UkrBashTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UkrBashTests.m; sourceTree = "<group>"; };
+		6DFDF3061438D93D005FB60F /* QuotesTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuotesTableController.h; sourceTree = "<group>"; };
+		6DFDF3071438D93D005FB60F /* QuotesTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuotesTableController.m; sourceTree = "<group>"; };
+		6DFDF3081438D93D005FB60F /* QuotesTableController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuotesTableController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +119,9 @@
 				6DFDF2E11438B9BC005FB60F /* UkrBashAppDelegate.h */,
 				6DFDF2E21438B9BC005FB60F /* UkrBashAppDelegate.m */,
 				6DFDF2E41438B9BD005FB60F /* MainWindow.xib */,
+				6DFDF3061438D93D005FB60F /* QuotesTableController.h */,
+				6DFDF3071438D93D005FB60F /* QuotesTableController.m */,
+				6DFDF3081438D93D005FB60F /* QuotesTableController.xib */,
 				6DFDF2D91438B9BC005FB60F /* Supporting Files */,
 			);
 			path = UkrBash;
@@ -218,6 +226,7 @@
 			files = (
 				6DFDF2DD1438B9BC005FB60F /* InfoPlist.strings in Resources */,
 				6DFDF2E61438B9BD005FB60F /* MainWindow.xib in Resources */,
+				6DFDF30A1438D93D005FB60F /* QuotesTableController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +264,7 @@
 			files = (
 				6DFDF2DF1438B9BC005FB60F /* main.m in Sources */,
 				6DFDF2E31438B9BC005FB60F /* UkrBashAppDelegate.m in Sources */,
+				6DFDF3091438D93D005FB60F /* QuotesTableController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
