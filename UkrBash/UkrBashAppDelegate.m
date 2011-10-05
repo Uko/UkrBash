@@ -7,6 +7,7 @@
 //
 
 #import "UkrBashAppDelegate.h"
+#import <RestKit/RestKit.h>
 
 @implementation UkrBashAppDelegate
 
