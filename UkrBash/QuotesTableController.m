@@ -12,6 +12,7 @@
 
 @implementation QuotesTableController
 
+@synthesize quotesTable = _quotesTable;
 @synthesize tableData = _tableData;
 @synthesize quoteViewController = _quoteViewController;
 
@@ -162,7 +163,7 @@
      */
     
     NSInteger row = [indexPath row];
-    if(quoteViewController == nil)
+    if(_quoteViewController == nil)
     {
         _quoteViewController = [[QuoteViewController alloc] initWithNibName:@"QuoteViewController" bundle:nil]; 
     }
@@ -173,8 +174,8 @@
 
 - (void) dealloc
 {
-    [tableData release];
-    [quoteViewController release];
+    [_tableData release];
+    [_quoteViewController release];
     [super dealloc];
 }
 
