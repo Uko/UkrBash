@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <RestKit/RestKit.h>
 @class QuoteViewController;
 
-@interface QuotesTableController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+@interface QuotesTableController : UITableViewController <UITableViewDataSource, UITableViewDelegate, RKObjectLoaderDelegate>
 {
     NSMutableArray *_tableData;
     QuoteViewController *_quoteViewController;

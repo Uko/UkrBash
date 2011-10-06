@@ -8,6 +8,7 @@
 
 #import "UkrBashAppDelegate.h"
 #import <RestKit/RestKit.h>
+#import "Quote.h"
 
 @implementation UkrBashAppDelegate
 
@@ -17,7 +18,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
+    RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelTrace);
     // Override point for customization after application launch.
+    RKObjectManager* objectManager = [RKObjectManager objectManagerWithBaseURL:@"http://api.ukrbash.org/1/"];
+    NSLog(@"Is net %i!!!!!!!!!:",[objectManager.client isNetworkAvailable]);
+    // Enable automatic network activity indicator management
+    
+    RKObjectMapping* quoteMapping = [RKObjectMapping mappingForClass:[Quote class]];
+    [quoteMapping mapKeyPath:@"id" toAttribute:@"id"];
+    [quoteMapping mapKeyPath:@"text" toAttribute:@"text"];
+    [quoteMapping mapKeyPath:@"author" toAttribute:@"author"];
+    
+    [[RKObjectManager sharedManager].mappingProvider setMapping:quoteMapping forKeyPath:@""];
+    
     [_window addSubview:_mainController.view];
     [self.window makeKeyAndVisible];
     return YES;

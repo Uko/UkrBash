@@ -9,6 +9,8 @@
 #import "QuotesTableController.h"
 #import "QuoteViewController.h"
 #import "UkrBashAppDelegate.h"
+#include <RestKit/RestKit.h>
+#include "Quote.h"
 
 @implementation QuotesTableController
 
@@ -33,6 +35,24 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+#pragma mark RKObjectLoaderDelegate methods
+
+- (void)loadArticles {
+    [[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"quotes.getPublished.json?client=6999312d8ef26bc9" delegate:self];
+}
+
+- (void)objectLoader:(RKObjectLoader*)objectLoader didLoadObjects:(NSArray*)objects {
+    /*for (Quote* i in objects) {
+        NSLog(@"ID: %@; Text: %@; Author: %@", i.id, i.text, i.author);
+    }*/
+    _tableData = [[NSMutableArray alloc] initWithArray: objects];
+    //NSLog(@"Load collection of Articles: %@", objects);
+}
+
+- (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error{
+    NSLog(@"Error:%@",error);
+}
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
@@ -40,7 +60,11 @@
     [super viewDidLoad];
     
     //NSMutableArray *array = [[NSMutableArray alloc] initWithObjects:@"one", @"two", nil];
-    _tableData = [[NSMutableArray alloc] initWithObjects:@"one", @"two", nil];
+    //_tableData = [[NSMutableArray alloc] initWithObjects:@"one", @"two", nil];
+    [self loadArticles];
+    for (Quote* i in _tableData) {
+     NSLog(@"ID: %@; Text: %@; Author: %@", i.id, i.text, i.author);
+     }
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -92,7 +116,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    //NSLog(@"%@ rows",[_tableData count]);
+    NSLog(@"%i rows",[_tableData count]);
     return [_tableData count];
 }
 
@@ -106,7 +130,8 @@
     }
     
     // Configure the cell...
-    cell.textLabel.text=[_tableData objectAtIndex:[indexPath row]];
+    //cell.textLabel.text=[_tableData objectAtIndex:[indexPath row]];
+    cell.textLabel.text=[(Quote *)[_tableData objectAtIndex:[indexPath row]] text];
     return cell;
 }
 
