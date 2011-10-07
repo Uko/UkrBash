@@ -106,7 +106,7 @@
 						<object class="IBUIViewController" id="876888478">
 							<object class="IBUINavigationItem" key="IBUINavigationItem" id="707174299">
 								<string key="IBUITitle">Цитати</string>
-								<object class="IBUIBarButtonItem" key="IBUIRightBarButtonItem" id="763128525">
+								<object class="IBUIBarButtonItem" key="IBUIRightBarButtonItem" id="120332849">
 									<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 									<int key="IBUIStyle">1</int>
 									<reference key="IBUINavigationItem" ref="707174299"/>
@@ -199,7 +199,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">reload</string>
-						<reference key="source" ref="763128525"/>
+						<reference key="source" ref="120332849"/>
 						<reference key="destination" ref="876888478"/>
 					</object>
 					<int key="connectionID">30</int>
@@ -298,7 +298,7 @@
 						<reference key="object" ref="707174299"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="763128525"/>
+							<reference ref="120332849"/>
 						</object>
 						<reference key="parent" ref="876888478"/>
 					</object>
@@ -309,7 +309,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">29</int>
-						<reference key="object" ref="763128525"/>
+						<reference key="object" ref="120332849"/>
 						<reference key="parent" ref="707174299"/>
 					</object>
 				</object>

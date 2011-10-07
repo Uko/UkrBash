@@ -13,12 +13,11 @@
 @interface QuotesTableController : UITableViewController <UITableViewDataSource, UITableViewDelegate, RKObjectLoaderDelegate>
 {
     NSMutableArray *_tableData;
-    QuoteViewController *_quoteViewController;
 }
 
 @property (nonatomic, retain) IBOutlet UITableView *quotesTable;
 @property (nonatomic, retain) NSMutableArray *tableData;
-@property (nonatomic, retain) QuoteViewController *quoteViewController;
+@property (nonatomic, retain) IBOutlet QuoteViewController *quoteViewController;
 
 - (IBAction) reload;
 

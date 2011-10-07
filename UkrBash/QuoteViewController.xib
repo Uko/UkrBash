@@ -52,7 +52,7 @@
 							<object class="IBUILabel" id="304216233">
 								<reference key="NSNextResponder" ref="968706436"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{20, 20}, {121, 21}}</string>
+								<string key="NSFrame">{{7, 20}, {121, 21}}</string>
 								<reference key="NSSuperview" ref="968706436"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="290816072"/>
@@ -62,7 +62,12 @@
 								<int key="IBUIContentMode">7</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<string key="IBUIText">Label</string>
+								<string key="IBUIText">Автор</string>
+								<object class="NSFont" key="IBUIFont">
+									<string key="NSName">Helvetica-Bold</string>
+									<double key="NSSize">17</double>
+									<int key="NSfFlags">16</int>
+								</object>
 								<object class="NSColor" key="IBUITextColor">
 									<int key="NSColorSpace">1</int>
 									<bytes key="NSRGB">MCAwIDAAA</bytes>
@@ -77,7 +82,6 @@
 								<string key="NSFrame">{{0, 49}, {320, 376}}</string>
 								<reference key="NSSuperview" ref="968706436"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:613</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">1</int>
@@ -100,7 +104,6 @@
 									<int key="NSfFlags">16</int>
 								</object>
 								<object class="IBUITextInputTraits" key="IBUITextInputTraits">
-									<int key="IBUIAutocapitalizationType">2</int>
 									<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								</object>
 							</object>

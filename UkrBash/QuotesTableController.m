@@ -37,12 +37,12 @@
 
 - (IBAction)reload
 {
-    [self loadArticles];
+    [self loadQuotes];
 }
 
 #pragma mark RKObjectLoaderDelegate methods
 
-- (void)loadArticles {
+- (void)loadQuotes {
     [[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"quotes.getPublished.json?client=6999312d8ef26bc9" delegate:self];
 }
 
@@ -67,7 +67,7 @@
     
     //NSMutableArray *array = [[NSMutableArray alloc] initWithObjects:@"one", @"two", nil];
     //_tableData = [[NSMutableArray alloc] initWithObjects:@"one", @"two", nil];
-    [self loadArticles];
+    [self loadQuotes];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -191,18 +191,12 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      [detailViewController release];
      */
-    
     NSInteger row = [indexPath row];
     Quote *quote = [_tableData objectAtIndex:row];
-    if(_quoteViewController == nil)
-    {
-        _quoteViewController = [[QuoteViewController alloc] initWithNibName:@"QuoteViewController" bundle:nil]; 
-    }
     _quoteViewController.title = [NSString stringWithFormat:@"%@",quote.author];
+    [self.navigationController pushViewController:_quoteViewController animated:YES];
     _quoteViewController.author.text = quote.author;
     _quoteViewController.quote.text = quote.text;
-    UkrBashAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
-    [delegate.quoteNavController pushViewController:_quoteViewController animated:YES];
 }
 
 - (void) dealloc
