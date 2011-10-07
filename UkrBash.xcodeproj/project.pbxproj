@@ -15,6 +15,10 @@
 		6D1F901B143C569400EC597F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D1F9018143C569400EC597F /* MobileCoreServices.framework */; };
 		6D1F901C143C569400EC597F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D1F9019143C569400EC597F /* SystemConfiguration.framework */; };
 		6DAD08F7143DBCCF00BD890C /* Quote.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DAD08F6143DBCCF00BD890C /* Quote.m */; };
+		6DCD5993143EECFA005A5574 /* bash.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DCD5992143EECFA005A5574 /* bash.png */; };
+		6DCD5995143EED04005A5574 /* bash retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DCD5994143EED04005A5574 /* bash retina.png */; };
+		6DCD599A143EEF0D005A5574 /* speechbubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DCD5999143EEF0D005A5574 /* speechbubble.png */; };
+		6DCD599C143EEF4F005A5574 /* photos.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DCD599B143EEF4F005A5574 /* photos.png */; };
 		6DFDF2D31438B9BC005FB60F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DFDF2D21438B9BC005FB60F /* UIKit.framework */; };
 		6DFDF2D51438B9BC005FB60F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DFDF2D41438B9BC005FB60F /* Foundation.framework */; };
 		6DFDF2D71438B9BC005FB60F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DFDF2D61438B9BC005FB60F /* CoreGraphics.framework */; };
@@ -136,6 +140,10 @@
 		6D1F9019143C569400EC597F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6DAD08F5143DBCCF00BD890C /* Quote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quote.h; sourceTree = "<group>"; };
 		6DAD08F6143DBCCF00BD890C /* Quote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quote.m; sourceTree = "<group>"; };
+		6DCD5992143EECFA005A5574 /* bash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bash.png; sourceTree = "<group>"; };
+		6DCD5994143EED04005A5574 /* bash retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bash retina.png"; sourceTree = "<group>"; };
+		6DCD5999143EEF0D005A5574 /* speechbubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speechbubble.png; sourceTree = "<group>"; };
+		6DCD599B143EEF4F005A5574 /* photos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photos.png; sourceTree = "<group>"; };
 		6DFDF2CE1438B9BC005FB60F /* UkrBash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UkrBash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DFDF2D21438B9BC005FB60F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6DFDF2D41438B9BC005FB60F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -211,9 +219,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		6DCD5996143EED17005A5574 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				6DCD599B143EEF4F005A5574 /* photos.png */,
+				6DCD5999143EEF0D005A5574 /* speechbubble.png */,
+				6DCD5994143EED04005A5574 /* bash retina.png */,
+				6DCD5992143EECFA005A5574 /* bash.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		6DFDF2C31438B9BB005FB60F = {
 			isa = PBXGroup;
 			children = (
+				6DCD5996143EED17005A5574 /* Images */,
 				6D1F8FE6143C55B300EC597F /* RestKit.xcodeproj */,
 				6DFDF2D81438B9BC005FB60F /* UkrBash */,
 				6DFDF2F41438B9BE005FB60F /* UkrBashTests */,
@@ -452,6 +472,10 @@
 				6DFDF2E61438B9BD005FB60F /* MainWindow.xib in Resources */,
 				6DFDF30A1438D93D005FB60F /* QuotesTableController.xib in Resources */,
 				6DFDF30F143901AC005FB60F /* QuoteViewController.xib in Resources */,
+				6DCD5993143EECFA005A5574 /* bash.png in Resources */,
+				6DCD5995143EED04005A5574 /* bash retina.png in Resources */,
+				6DCD599A143EEF0D005A5574 /* speechbubble.png in Resources */,
+				6DCD599C143EEF4F005A5574 /* photos.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,19 +18,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
-    RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelTrace);
+    //RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
+    //RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelTrace);
     // Override point for customization after application launch.
     RKObjectManager* objectManager = [RKObjectManager objectManagerWithBaseURL:@"http://api.ukrbash.org/1/"];
     // Enable automatic network activity indicator management
-    
+    objectManager.client.requestQueue.showsNetworkActivityIndicatorWhenBusy = YES;
     RKObjectMapping* quoteMapping = [RKObjectMapping mappingForClass:[Quote class]];
     [quoteMapping mapKeyPath:@"id" toAttribute:@"id"];
     [quoteMapping mapKeyPath:@"text" toAttribute:@"text"];
     [quoteMapping mapKeyPath:@"author" toAttribute:@"author"];
     
     [[RKObjectManager sharedManager].mappingProvider setMapping:quoteMapping forKeyPath:@""];
-    
     [_window addSubview:_mainController.view];
     [self.window makeKeyAndVisible];
     return YES;

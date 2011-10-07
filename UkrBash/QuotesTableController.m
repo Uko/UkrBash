@@ -35,6 +35,11 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+- (IBAction)reload
+{
+    [self loadArticles];
+}
+
 #pragma mark RKObjectLoaderDelegate methods
 
 - (void)loadArticles {
@@ -125,12 +130,13 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
     
     // Configure the cell...
     //cell.textLabel.text=[_tableData objectAtIndex:[indexPath row]];
-    cell.textLabel.text=[(Quote *)[_tableData objectAtIndex:[indexPath row]] author];
+    cell.detailTextLabel.text=[(Quote *)[_tableData objectAtIndex:[indexPath row]] author];
+    cell.textLabel.text = [(Quote *)[_tableData objectAtIndex:[indexPath row]] text];
     return cell;
 }
 

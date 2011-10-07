@@ -20,4 +20,6 @@
 @property (nonatomic, retain) NSMutableArray *tableData;
 @property (nonatomic, retain) QuoteViewController *quoteViewController;
 
+- (IBAction) reload;
+
 @end
