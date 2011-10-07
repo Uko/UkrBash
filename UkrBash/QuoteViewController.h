@@ -10,4 +10,7 @@
 
 @interface QuoteViewController : UIViewController
 
+@property (nonatomic, retain) IBOutlet UILabel *author;
+@property (nonatomic, retain) IBOutlet UITextView *quote;
+
 @end

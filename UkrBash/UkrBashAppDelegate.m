@@ -22,7 +22,6 @@
     RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelTrace);
     // Override point for customization after application launch.
     RKObjectManager* objectManager = [RKObjectManager objectManagerWithBaseURL:@"http://api.ukrbash.org/1/"];
-    NSLog(@"Is net %i!!!!!!!!!:",[objectManager.client isNetworkAvailable]);
     // Enable automatic network activity indicator management
     
     RKObjectMapping* quoteMapping = [RKObjectMapping mappingForClass:[Quote class]];

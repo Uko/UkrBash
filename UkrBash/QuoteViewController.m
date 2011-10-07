@@ -10,6 +10,9 @@
 
 @implementation QuoteViewController
 
+@synthesize author = _author;
+@synthesize quote = _quote;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

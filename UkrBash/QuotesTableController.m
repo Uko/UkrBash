@@ -46,6 +46,7 @@
         NSLog(@"ID: %@; Text: %@; Author: %@", i.id, i.text, i.author);
     }*/
     _tableData = [[NSMutableArray alloc] initWithArray: objects];
+    [_quotesTable reloadData];
     //NSLog(@"Load collection of Articles: %@", objects);
 }
 
@@ -62,9 +63,6 @@
     //NSMutableArray *array = [[NSMutableArray alloc] initWithObjects:@"one", @"two", nil];
     //_tableData = [[NSMutableArray alloc] initWithObjects:@"one", @"two", nil];
     [self loadArticles];
-    for (Quote* i in _tableData) {
-     NSLog(@"ID: %@; Text: %@; Author: %@", i.id, i.text, i.author);
-     }
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -82,6 +80,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [_quotesTable reloadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -131,7 +130,7 @@
     
     // Configure the cell...
     //cell.textLabel.text=[_tableData objectAtIndex:[indexPath row]];
-    cell.textLabel.text=[(Quote *)[_tableData objectAtIndex:[indexPath row]] text];
+    cell.textLabel.text=[(Quote *)[_tableData objectAtIndex:[indexPath row]] author];
     return cell;
 }
 
@@ -188,11 +187,14 @@
      */
     
     NSInteger row = [indexPath row];
+    Quote *quote = [_tableData objectAtIndex:row];
     if(_quoteViewController == nil)
     {
         _quoteViewController = [[QuoteViewController alloc] initWithNibName:@"QuoteViewController" bundle:nil]; 
     }
-    _quoteViewController.title = [NSString stringWithFormat:@"%@",[_tableData objectAtIndex:row]];
+    _quoteViewController.title = [NSString stringWithFormat:@"%@",quote.author];
+    _quoteViewController.author.text = quote.author;
+    _quoteViewController.quote.text = quote.text;
     UkrBashAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
     [delegate.quoteNavController pushViewController:_quoteViewController animated:YES];
 }
