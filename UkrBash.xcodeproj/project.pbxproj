@@ -19,6 +19,11 @@
 		6DCD5995143EED04005A5574 /* bash retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DCD5994143EED04005A5574 /* bash retina.png */; };
 		6DCD599A143EEF0D005A5574 /* speechbubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DCD5999143EEF0D005A5574 /* speechbubble.png */; };
 		6DCD599C143EEF4F005A5574 /* photos.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DCD599B143EEF4F005A5574 /* photos.png */; };
+		6DCEA1F7143FA1F300482972 /* PicturesTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DCEA1F5143FA1F300482972 /* PicturesTableController.m */; };
+		6DCEA1F8143FA1F300482972 /* PicturesTableController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DCEA1F6143FA1F300482972 /* PicturesTableController.xib */; };
+		6DCEA1FB143FB1D300482972 /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DCEA1FA143FB1D100482972 /* Picture.m */; };
+		6DCEA1FF143FC1CF00482972 /* PictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DCEA1FD143FC1CE00482972 /* PictureViewController.m */; };
+		6DCEA200143FC1CF00482972 /* PictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DCEA1FE143FC1CF00482972 /* PictureViewController.xib */; };
 		6DFDF2D31438B9BC005FB60F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DFDF2D21438B9BC005FB60F /* UIKit.framework */; };
 		6DFDF2D51438B9BC005FB60F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DFDF2D41438B9BC005FB60F /* Foundation.framework */; };
 		6DFDF2D71438B9BC005FB60F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DFDF2D61438B9BC005FB60F /* CoreGraphics.framework */; };
@@ -144,6 +149,14 @@
 		6DCD5994143EED04005A5574 /* bash retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bash retina.png"; sourceTree = "<group>"; };
 		6DCD5999143EEF0D005A5574 /* speechbubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speechbubble.png; sourceTree = "<group>"; };
 		6DCD599B143EEF4F005A5574 /* photos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photos.png; sourceTree = "<group>"; };
+		6DCEA1F4143FA1F200482972 /* PicturesTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PicturesTableController.h; sourceTree = "<group>"; };
+		6DCEA1F5143FA1F300482972 /* PicturesTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PicturesTableController.m; sourceTree = "<group>"; };
+		6DCEA1F6143FA1F300482972 /* PicturesTableController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PicturesTableController.xib; sourceTree = "<group>"; };
+		6DCEA1F9143FB1CD00482972 /* Picture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture.h; sourceTree = "<group>"; };
+		6DCEA1FA143FB1D100482972 /* Picture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture.m; sourceTree = "<group>"; };
+		6DCEA1FC143FC1CE00482972 /* PictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureViewController.h; sourceTree = "<group>"; };
+		6DCEA1FD143FC1CE00482972 /* PictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureViewController.m; sourceTree = "<group>"; };
+		6DCEA1FE143FC1CF00482972 /* PictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PictureViewController.xib; sourceTree = "<group>"; };
 		6DFDF2CE1438B9BC005FB60F /* UkrBash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UkrBash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DFDF2D21438B9BC005FB60F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6DFDF2D41438B9BC005FB60F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -276,9 +289,17 @@
 				6DFDF3061438D93D005FB60F /* QuotesTableController.h */,
 				6DFDF3071438D93D005FB60F /* QuotesTableController.m */,
 				6DFDF3081438D93D005FB60F /* QuotesTableController.xib */,
+				6DCEA1F4143FA1F200482972 /* PicturesTableController.h */,
+				6DCEA1F5143FA1F300482972 /* PicturesTableController.m */,
+				6DCEA1F6143FA1F300482972 /* PicturesTableController.xib */,
+				6DCEA1F9143FB1CD00482972 /* Picture.h */,
+				6DCEA1FA143FB1D100482972 /* Picture.m */,
 				6DFDF30B143901AB005FB60F /* QuoteViewController.h */,
 				6DFDF30C143901AC005FB60F /* QuoteViewController.m */,
 				6DFDF30D143901AC005FB60F /* QuoteViewController.xib */,
+				6DCEA1FC143FC1CE00482972 /* PictureViewController.h */,
+				6DCEA1FD143FC1CE00482972 /* PictureViewController.m */,
+				6DCEA1FE143FC1CF00482972 /* PictureViewController.xib */,
 				6DFDF2D91438B9BC005FB60F /* Supporting Files */,
 			);
 			path = UkrBash;
@@ -476,6 +497,8 @@
 				6DCD5995143EED04005A5574 /* bash retina.png in Resources */,
 				6DCD599A143EEF0D005A5574 /* speechbubble.png in Resources */,
 				6DCD599C143EEF4F005A5574 /* photos.png in Resources */,
+				6DCEA1F8143FA1F300482972 /* PicturesTableController.xib in Resources */,
+				6DCEA200143FC1CF00482972 /* PictureViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +539,9 @@
 				6DFDF3091438D93D005FB60F /* QuotesTableController.m in Sources */,
 				6DFDF30E143901AC005FB60F /* QuoteViewController.m in Sources */,
 				6DAD08F7143DBCCF00BD890C /* Quote.m in Sources */,
+				6DCEA1F7143FA1F300482972 /* PicturesTableController.m in Sources */,
+				6DCEA1FB143FB1D300482972 /* Picture.m in Sources */,
+				6DCEA1FF143FC1CF00482972 /* PictureViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

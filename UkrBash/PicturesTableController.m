@@ -1,29 +1,27 @@
 //
-//  QuotesTableController.m
+//  PicturesTableController.m
 //  UkrBash
 //
-//  Created by Юрко Тимчук on 02.10.11.
+//  Created by Юрко Тимчук on 08.10.11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "QuotesTableController.h"
-#import "QuoteViewController.h"
-#import "UkrBashAppDelegate.h"
-#include <RestKit/RestKit.h>
-#include "Quote.h"
+#import "PicturesTableController.h"
+#import "Picture.h"
+#import "PictureViewController.h"
 
-@implementation QuotesTableController
+@implementation PicturesTableController
 
-@synthesize quotesTable = _quotesTable;
+@synthesize picturesTable = _picturesTable;
 @synthesize tableData = _tableData;
-@synthesize quoteViewController = _quoteViewController;
 @synthesize restKitManager = _restKitManager;
+@synthesize pictureViewController = _pictureViewController;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
-    
+        // Custom initialization
     }
     return self;
 }
@@ -39,15 +37,15 @@
 #pragma mark RKObjectLoaderDelegate methods
 
 - (void)loadQuotes {
-    [_restKitManager loadObjectsAtResourcePath:@"quotes.getPublished.json?client=6999312d8ef26bc9" delegate:self];
+    [_restKitManager loadObjectsAtResourcePath:@"pictures.getPublished.json?client=6999312d8ef26bc9" delegate:self];
 }
 
 - (void)objectLoader:(RKObjectLoader*)objectLoader didLoadObjects:(NSArray*)objects {
     /*for (Quote* i in objects) {
-        NSLog(@"ID: %@; Text: %@; Author: %@", i.id, i.text, i.author);
-    }*/
+     NSLog(@"ID: %@; Text: %@; Author: %@", i.id, i.text, i.author);
+     }*/
     _tableData = [[NSMutableArray alloc] initWithArray: objects];
-    [_quotesTable reloadData];
+    [_picturesTable reloadData];
     //NSLog(@"Load collection of Articles: %@", objects);
 }
 
@@ -60,21 +58,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _restKitManager = [RKObjectManager objectManagerWithBaseURL:@"http://api.ukrbash.org/1/"];
-    // Enable automatic network activity indicator management
-    _restKitManager.client.requestQueue.showsNetworkActivityIndicatorWhenBusy = YES;
-    RKObjectMapping* quoteMapping = [RKObjectMapping mappingForClass:[Quote class]];
-    [quoteMapping mapKeyPath:@"id" toAttribute:@"id"];
-    [quoteMapping mapKeyPath:@"text" toAttribute:@"text"];
-    [quoteMapping mapKeyPath:@"author" toAttribute:@"author"];
-    
-    [_restKitManager.mappingProvider setMapping:quoteMapping forKeyPath:@""];
-    //NSMutableArray *array = [[NSMutableArray alloc] initWithObjects:@"one", @"two", nil];
-    //_tableData = [[NSMutableArray alloc] initWithObjects:@"one", @"two", nil];
-    [self loadQuotes];
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
- 
+    _restKitManager = [[RKObjectManager objectManagerWithBaseURL:@"http://api.ukrbash.org/1/"] retain];
+    // Enable automatic network activity indicator management
+    _restKitManager.client.requestQueue.showsNetworkActivityIndicatorWhenBusy = YES;
+    RKObjectMapping* quoteMapping = [RKObjectMapping mappingForClass:[Picture class]];
+    [quoteMapping mapKeyPath:@"id" toAttribute:@"id"];
+    [quoteMapping mapKeyPath:@"title" toAttribute:@"title"];
+    [quoteMapping mapKeyPath:@"author" toAttribute:@"author"];
+    [quoteMapping mapKeyPath:@"thumbnail" toAttribute:@"thumbnail"];
+    [quoteMapping mapKeyPath:@"image" toAttribute:@"image"];
+    
+    [_restKitManager.mappingProvider setMapping:quoteMapping forKeyPath:@""];
+    
+    [self loadQuotes];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
@@ -89,7 +88,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [_quotesTable reloadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -138,9 +136,9 @@
     }
     
     // Configure the cell...
-    //cell.textLabel.text=[_tableData objectAtIndex:[indexPath row]];
-    cell.detailTextLabel.text=[(Quote *)[_tableData objectAtIndex:[indexPath row]] author];
-    cell.textLabel.text = [(Quote *)[_tableData objectAtIndex:[indexPath row]] text];
+    cell.detailTextLabel.text=[(Picture *)[_tableData objectAtIndex:[indexPath row]] author];
+    cell.textLabel.text = [(Picture *)[_tableData objectAtIndex:[indexPath row]] title];
+    cell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[(Picture *)[_tableData objectAtIndex:[indexPath row]] thumbnail]]];
     return cell;
 }
 
@@ -196,25 +194,15 @@
      [detailViewController release];
      */
     NSInteger row = [indexPath row];
-    Quote *quote = [_tableData objectAtIndex:row];
-    _quoteViewController.title = [NSString stringWithFormat:@"%@",quote.author];
-    [self.navigationController pushViewController:_quoteViewController animated:YES];
-    _quoteViewController.author.text = quote.author;
-    _quoteViewController.quote.text = quote.text;
+    Picture *picture = [_tableData objectAtIndex:row];
+    _pictureViewController.title = [NSString stringWithFormat:@"%@",picture.title];
+    [self.navigationController pushViewController:_pictureViewController animated:YES];
+    _pictureViewController.image.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:picture.image]]; 
 }
 
-- (IBAction)reload
+-(IBAction)reload
 {
     [self loadQuotes];
-}
-
-- (void) dealloc
-{
-    [_restKitManager release];
-    [_quotesTable release];
-    [_tableData release];
-    [_quoteViewController release];
-    [super dealloc];
 }
 
 @end
