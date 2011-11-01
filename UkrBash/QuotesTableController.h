@@ -12,15 +12,18 @@
 
 @interface QuotesTableController : UITableViewController <UITableViewDataSource, UITableViewDelegate, RKObjectLoaderDelegate>
 {
-    NSMutableArray *_tableData;
+    NSMutableArray *_publishedData;
+    NSMutableArray *_notpublishedData;
+    NSMutableArray *_bestData;
     RKObjectManager *_restKitManager;
 }
 
 @property (nonatomic, retain) IBOutlet UITableView *quotesTable;
-@property (nonatomic, retain) NSMutableArray *tableData;
 @property (nonatomic, retain) IBOutlet QuoteViewController *quoteViewController;
 @property (nonatomic, retain) RKObjectManager *restKitManager;
+@property (nonatomic, retain) IBOutlet UISegmentedControl *segmentedControl;
 
 - (IBAction) reload;
+- (IBAction) changePage:(id)sender;
 
 @end

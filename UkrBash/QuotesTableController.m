@@ -15,9 +15,9 @@
 @implementation QuotesTableController
 
 @synthesize quotesTable = _quotesTable;
-@synthesize tableData = _tableData;
 @synthesize quoteViewController = _quoteViewController;
 @synthesize restKitManager = _restKitManager;
+@synthesize segmentedControl = _segmentedControl;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -39,14 +39,23 @@
 #pragma mark RKObjectLoaderDelegate methods
 
 - (void)loadQuotes {
-    [_restKitManager loadObjectsAtResourcePath:@"quotes.getPublished.json?client=6999312d8ef26bc9" delegate:self];
+    switch (_segmentedControl.selectedSegmentIndex) {
+        case 0:
+            [_restKitManager loadObjectsAtResourcePath:@"quotes.getUpcoming.json?client=6999312d8ef26bc9" delegate:self];
+            break;
+        case 1:
+            [_restKitManager loadObjectsAtResourcePath:@"quotes.getPublished.json?client=6999312d8ef26bc9" delegate:self];
+            break;
+        case 2:
+            [_restKitManager loadObjectsAtResourcePath:@"quotes.getTheBest.json?client=6999312d8ef26bc9" delegate:self];
+    }
 }
 
 - (void)objectLoader:(RKObjectLoader*)objectLoader didLoadObjects:(NSArray*)objects {
     /*for (Quote* i in objects) {
         NSLog(@"ID: %@; Text: %@; Author: %@", i.id, i.text, i.author);
     }*/
-    _tableData = [[NSMutableArray alloc] initWithArray: objects];
+    _publishedData = [[NSMutableArray alloc] initWithArray: objects];
     [_quotesTable reloadData];
     //NSLog(@"Load collection of Articles: %@", objects);
 }
@@ -60,6 +69,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _quoteViewController.navigationItem.hidesBackButton = NO;
     _restKitManager = [RKObjectManager objectManagerWithBaseURL:@"http://api.ukrbash.org/1/"];
     // Enable automatic network activity indicator management
     _restKitManager.client.requestQueue.showsNetworkActivityIndicatorWhenBusy = YES;
@@ -124,8 +134,8 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    NSLog(@"%i rows",[_tableData count]);
-    return [_tableData count];
+    NSLog(@"%i rows",[_publishedData count]);
+    return [_publishedData count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -138,9 +148,9 @@
     }
     
     // Configure the cell...
-    //cell.textLabel.text=[_tableData objectAtIndex:[indexPath row]];
-    cell.detailTextLabel.text=[(Quote *)[_tableData objectAtIndex:[indexPath row]] author];
-    cell.textLabel.text = [(Quote *)[_tableData objectAtIndex:[indexPath row]] text];
+    //cell.textLabel.text=[_tableData objectAtIndex:[indexPath row]]; }
+    cell.detailTextLabel.text=[(Quote *)[_publishedData objectAtIndex:[indexPath row]] author];
+    cell.textLabel.text = [(Quote *)[_publishedData objectAtIndex:[indexPath row]] text];
     return cell;
 }
 
@@ -196,7 +206,7 @@
      [detailViewController release];
      */
     NSInteger row = [indexPath row];
-    Quote *quote = [_tableData objectAtIndex:row];
+    Quote *quote = [_publishedData objectAtIndex:row];
     _quoteViewController.title = [NSString stringWithFormat:@"%@",quote.author];
     [self.navigationController pushViewController:_quoteViewController animated:YES];
     _quoteViewController.author.text = quote.author;
@@ -208,11 +218,17 @@
     [self loadQuotes];
 }
 
+- (IBAction)changePage:(id)sender
+{
+    self.navigationItem.title = [_segmentedControl titleForSegmentAtIndex:_segmentedControl.selectedSegmentIndex];
+    [self loadQuotes];
+}
+
 - (void) dealloc
 {
     [_restKitManager release];
     [_quotesTable release];
-    [_tableData release];
+    [_publishedData release];
     [_quoteViewController release];
     [super dealloc];
 }
